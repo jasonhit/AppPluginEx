@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AppPluginEx", "AppPluginEx.vcxproj", "{5F607636-962E-3131-AB25-E16E21272A0E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AppPluginExTest", "AppPluginExTest\AppPluginExTest.vcxproj", "{1C471CFE-3C95-3928-B14D-4364D8AE6431}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5F607636-962E-3131-AB25-E16E21272A0E} = {5F607636-962E-3131-AB25-E16E21272A0E}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +20,10 @@ Global
 		{5F607636-962E-3131-AB25-E16E21272A0E}.Debug|x64.Build.0 = Debug|x64
 		{5F607636-962E-3131-AB25-E16E21272A0E}.Release|x64.ActiveCfg = Release|x64
 		{5F607636-962E-3131-AB25-E16E21272A0E}.Release|x64.Build.0 = Release|x64
+		{1C471CFE-3C95-3928-B14D-4364D8AE6431}.Debug|x64.ActiveCfg = Debug|x64
+		{1C471CFE-3C95-3928-B14D-4364D8AE6431}.Debug|x64.Build.0 = Debug|x64
+		{1C471CFE-3C95-3928-B14D-4364D8AE6431}.Release|x64.ActiveCfg = Release|x64
+		{1C471CFE-3C95-3928-B14D-4364D8AE6431}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
