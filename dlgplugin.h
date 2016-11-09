@@ -3,7 +3,6 @@
 
 #include <QGenericPlugin>
 
-
 class DlgPlugin : public QGenericPlugin
 {
     Q_OBJECT
@@ -13,6 +12,10 @@ class DlgPlugin : public QGenericPlugin
 
 public:
     DlgPlugin(QObject *parent = 0);
+
+private:
+	virtual void registerTypes(const char *uri);
+	virtual QObject* create(const QString& name, const QString &spec);
 };
 
 #endif // DLGPLUGIN_H

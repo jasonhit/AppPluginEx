@@ -12,9 +12,11 @@ CONFIG += plugin
 
 DESTDIR = $$[QT_INSTALL_PLUGINS]/generic
 
-SOURCES += dlgplugin.cpp
+SOURCES += dlgplugin.cpp \
+    DlgModel.cpp
 
-HEADERS += dlgplugin.h
+HEADERS += dlgplugin.h \
+    DlgModel.h
 DISTFILES += AppPluginEx.json
 
 unix {

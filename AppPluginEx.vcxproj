@@ -138,9 +138,16 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DlgModel.cpp" />
     <ClCompile Include="dlgplugin.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_DlgModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_dlgplugin.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DlgModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_dlgplugin.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -160,6 +167,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="AppPluginEx.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="DlgModel.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing DlgModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_PLUGIN -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-I.\..\..\..\..\Qt\Qt5.6.1\5.6\msvc2015_64\include" "-I.\..\..\..\..\Qt\Qt5.6.1\5.6\msvc2015_64\include\QtGui" "-I.\..\..\..\..\Qt\Qt5.6.1\5.6\msvc2015_64\include\QtANGLE" "-I.\..\..\..\..\Qt\Qt5.6.1\5.6\msvc2015_64\include\QtCore" "-I.\debug" "-I.\..\..\..\..\Qt\Qt5.6.1\5.6\msvc2015_64\mkspecs\win32-msvc2015"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing DlgModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DQT_PLUGIN -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-I.\..\..\..\..\Qt\Qt5.6.1\5.6\msvc2015_64\include" "-I.\..\..\..\..\Qt\Qt5.6.1\5.6\msvc2015_64\include\QtGui" "-I.\..\..\..\..\Qt\Qt5.6.1\5.6\msvc2015_64\include\QtANGLE" "-I.\..\..\..\..\Qt\Qt5.6.1\5.6\msvc2015_64\include\QtCore" "-I.\release" "-I.\..\..\..\..\Qt\Qt5.6.1\5.6\msvc2015_64\mkspecs\win32-msvc2015"</Command>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
