@@ -10,8 +10,11 @@ class DlgPlugin : public QGenericPlugin
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QGenericPluginFactoryInterface" FILE "AppPluginEx.json")
 #endif // QT_VERSION >= 0x050000
 
+private:
+	explicit DlgPlugin(QObject* const parent);
+
 public:
-    DlgPlugin(QObject *parent = 0);
+	DlgPlugin();
 
 private:
 	virtual void registerTypes(const char *uri);

@@ -6,7 +6,12 @@
 
 
 DlgPlugin::DlgPlugin(QObject *parent) :
-    QGenericPlugin(parent)
+	QGenericPlugin(parent)
+{
+}
+
+DlgPlugin::DlgPlugin() :
+	DlgPlugin(nullptr)
 {
 }
 
@@ -16,10 +21,11 @@ void DlgPlugin::registerTypes(const char *uri)
 	qmlRegisterType<DlgModel>(uri, 1, 0, "DlgData");
 }
 
-QObject* DlgPlugin::create(const QString& key, const QString &spec)
+QObject* DlgPlugin::create(const QString& name, const QString &spec)
 {
+	Q_ASSERT(false);// TODO: Implement or not to implement?
 	QObject* result = nullptr;
-	if (!key.compare(QLatin1String("dlgplugin"), Qt::CaseInsensitive))
+	if (!name.compare(QLatin1String("dlgplugin"), Qt::CaseInsensitive))
 	{
 		// result = new ExampleDlg(key, spec);
 	}
