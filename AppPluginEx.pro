@@ -17,7 +17,8 @@ SOURCES += dlgplugin.cpp \
 
 HEADERS += dlgplugin.h \
     DlgModel.h
-DISTFILES += AppPluginEx.json
+DISTFILES += AppPluginEx.json \
+    main.qml
 
 unix {
     target.path = /usr/lib
