@@ -175,6 +175,7 @@
   <ItemGroup>
     <None Include="AppPluginEx.json" />
     <None Include="AppPluginEx.pro" />
+    <None Include="main.qml" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="DlgModel.h">

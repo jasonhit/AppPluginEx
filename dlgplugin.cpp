@@ -17,13 +17,13 @@ DlgPlugin::DlgPlugin() :
 
 void DlgPlugin::registerTypes(const char *uri)
 {
-	Q_ASSERT(uri == QLatin1String("Unknown value here."));
-	qmlRegisterType<DlgModel>(uri, 1, 0, "DlgData");
+	Q_ASSERT(uri == QLatin1String("Unknown value here.")); // TODO: What value is this?
+	qmlRegisterType<DlgModel>(uri, 1, 0, "DlgData"); // TODO: Is this correct?
 }
 
-QObject* DlgPlugin::create(const QString& name, const QString &spec)
+QObject* DlgPlugin::create(const QString& name, const QString &spec) // TODO: Implement or not to implement?
 {
-	Q_ASSERT(false);// TODO: Implement or not to implement?
+	Q_ASSERT(false); // TODO: Remove.
 	QObject* result = nullptr;
 	if (!name.compare(QLatin1String("dlgplugin"), Qt::CaseInsensitive))
 	{
